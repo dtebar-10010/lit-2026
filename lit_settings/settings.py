@@ -190,7 +190,7 @@ CKEDITOR_5_CONFIGS = {
             "indent",
             "|",
             "blockQuote",
-            "imageUpload",
+            # "imageUpload",
             # "code",
             # "subscript",
             # "superscript",
@@ -282,7 +282,6 @@ CKEDITOR_5_CONFIGS = {
         }
     },
 }
-
 # Production HTTPS settings
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
@@ -290,6 +289,4 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
-
-
-
+    X_FRAME_OPTIONS = 'SAMEORIGIN'

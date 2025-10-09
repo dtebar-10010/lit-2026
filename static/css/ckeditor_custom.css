@@ -1,0 +1,65 @@
+/* Custom CKEditor 5 styles for black background in Django admin */
+
+/* Main editor content area */
+.ck.ck-content.ck-editor__editable {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    min-height: 200px;
+}
+
+/* All text elements inside the editor */
+.ck.ck-content.ck-editor__editable *,
+.ck.ck-content.ck-editor__editable p,
+.ck.ck-content.ck-editor__editable h1,
+.ck.ck-content.ck-editor__editable h2,
+.ck.ck-content.ck-editor__editable h3,
+.ck.ck-content.ck-editor__editable h4,
+.ck.ck-content.ck-editor__editable h5,
+.ck.ck-content.ck-editor__editable h6,
+.ck.ck-content.ck-editor__editable li,
+.ck.ck-content.ck-editor__editable span,
+.ck.ck-content.ck-editor__editable div {
+    color: #ffffff !important;
+}
+
+/* Placeholder text */
+.ck.ck-editor__editable .ck-placeholder::before {
+    color: #888888 !important;
+}
+
+/* Optional: Dark toolbar to match */
+.ck.ck-toolbar {
+    background-color: #1a1a1a !important;
+    border-color: #333333 !important;
+}
+
+.ck.ck-toolbar .ck-toolbar__items {
+    background-color: #1a1a1a !important;
+}
+
+.ck.ck-button {
+    color: #cccccc !important;
+}
+
+.ck.ck-button:hover {
+    background-color: #333333 !important;
+}
+
+.ck.ck-button.ck-on {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown panels */
+.ck.ck-dropdown__panel {
+    background-color: #1a1a1a !important;
+    border-color: #333333 !important;
+}
+
+.ck.ck-list__item {
+    color: #cccccc !important;
+}
+
+.ck.ck-list__item:hover {
+    background-color: #333333 !important;
+}
