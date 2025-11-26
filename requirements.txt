@@ -17,4 +17,5 @@ six==1.17.0
 sqlparse==0.5.3
 tqdm==4.67.1
 tzdata==2025.2
-whitenoise==6.8.2
+whitenoise==6
+
