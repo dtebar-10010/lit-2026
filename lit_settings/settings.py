@@ -8,16 +8,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='django-insecure-y243nt-14zbt%o7sp*y%()^ao@0xr@$&!@=1!#4hn_#)d*i9!u')
+SECRET_KEY = config(
+    "SECRET_KEY",
+    default="django-insecure-y243nt-14zbt%o7sp*y%()^ao@0xr@$&!@=1!#4hn_#)d*i9!u",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=Csv())
+ALLOWED_HOSTS = config(
+    "ALLOWED_HOSTS",
+    default="localhost,127.0.0.1,liveitech.com,www.liveitech.com",
+    cast=Csv(),
+)
 
-#DEBUG=False
-#SECRET_KEY=generate-a-new-secret-key-for-production
-#ALLOWED_HOSTS=yourusername.pythonanywhere.com,www.liveitech.com,liveitech.com
+# DEBUG=False
+# SECRET_KEY=generate-a-new-secret-key-for-production
+# ALLOWED_HOSTS=yourusername.pythonanywhere.com,www.liveitech.com,liveitech.com
 
 # Application definition
 
@@ -289,15 +296,14 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
-    X_FRAME_OPTIONS = 'SAMEORIGIN'
+    X_FRAME_OPTIONS = "SAMEORIGIN"
 
 # Email Configuration
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='noreply@liveitech.com')
-CONTACT_EMAIL = config('CONTACT_EMAIL', default='info@liveitech.com')
-
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="noreply@liveitech.com")
+CONTACT_EMAIL = config("CONTACT_EMAIL", default="info@liveitech.com")
