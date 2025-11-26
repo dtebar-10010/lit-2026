@@ -5,6 +5,7 @@ cssbeautifier==1.15.4
 Django==4.2.26
 django-ckeditor-5==0.2.18
 django-crispy-forms==2.4
+djlint==1.36.4
 EditorConfig==0.17.1
 jsbeautifier==1.15.4
 json5==0.12.1
