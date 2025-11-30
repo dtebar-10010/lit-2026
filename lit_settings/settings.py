@@ -300,10 +300,14 @@ if not DEBUG:
 
 # Email Configuration
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = config("EMAIL_HOST", default="smtp.gmail.com")
+EMAIL_HOST = config("EMAIL_HOST", default="smtp.office365.com")  # Microsoft 365 SMTP
 EMAIL_PORT = config("EMAIL_PORT", cast=int, default=587)
 EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool, default=True)
-EMAIL_HOST_USER = config("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
-DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
-CONTACT_EMAIL = config("CONTACT_EMAIL")
+EMAIL_HOST_USER = config(
+    "EMAIL_HOST_USER", default="mfigueroa@liveitech.com"
+)  # Microsoft 365 account
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")  # Set in .env
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="mfigueroa@liveitech.com")
+CONTACT_EMAIL = config(
+    "CONTACT_EMAIL", default="mfigueroa@liveitech.com"
+)  # Recipient for contact form
